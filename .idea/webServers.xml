@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c0ea0b2d-e3ca-45b2-9f58-3cb0274f3eb4" name="szuflandia.pjwstk.edu.pl" url="http://szuflandia.pjwstk.edu.pl/~s22202">
+        <fileTransfer rootFolder="/home/PJWSTK/s22202" accessType="SFTP" host="szuflandia.pjwstk.edu.pl" port="22" sshConfigId="a3a06704-c507-4c33-b11d-52e9cae7a385" sshConfig="s22202@szuflandia.pjwstk.edu.pl:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
