@@ -1,3 +1,4 @@
+<!-- polish bleep censor -->
 <?php
 $badWords = array("kurwa", "jebać", "suka", "chuj", "jebana");
 $sentence = "Ania to kurwa jebana suka i chuj";
