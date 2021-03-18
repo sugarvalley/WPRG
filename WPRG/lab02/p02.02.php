@@ -17,3 +17,17 @@ Hints:
     > Choose 10 EU countries as keys -->
 
 <?php
+$flags = array(
+        "Poland" => "white", "red",
+        "Germany" => "black", "red", "yellow",
+        "Belgium" => "black", "red", "yellow",
+        "France" => "blue", "white", "red",
+        "Greece" => "blue", "white",
+        "Spain" => "red", "yellow",
+        "Croatia" => "red", "white", "blue",
+        "Ireland" => "green", "white", "orange",
+        "Holland" => "red", "white", "blue",
+        "Lithuania" => "yellow", "green", "red");
+$colors = array_count_values($flags);
+arsort($colors);
+var_dump($colors);
