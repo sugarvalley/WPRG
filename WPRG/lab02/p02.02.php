@@ -18,16 +18,32 @@ Hints:
 
 <?php
 $flags = array(
-        "Poland" => "white", "red",
-        "Germany" => "black", "red", "yellow",
-        "Belgium" => "black", "red", "yellow",
-        "France" => "blue", "white", "red",
-        "Greece" => "blue", "white",
-        "Spain" => "red", "yellow",
-        "Croatia" => "red", "white", "blue",
-        "Ireland" => "green", "white", "orange",
-        "Holland" => "red", "white", "blue",
-        "Lithuania" => "yellow", "green", "red");
-$colors = array_count_values($flags);
-arsort($colors);
-var_dump($colors);
+    "Poland" => array("white", "red"),
+    "Germany" => array("black", "red", "yellow"),
+    "Belgium" => array("black", "red", "yellow"),
+    "France" => array("blue", "white", "red"),
+    "Greece" => array("blue", "white"),
+    "Spain" => array("red", "yellow"),
+    "Croatia" => array("red", "white", "blue"),
+    "Ireland" => array("green", "white", "orange"),
+    "Holland" => array("red", "white", "blue"),
+    "Lithuania" => array("yellow", "green", "red"));
+$c = array();
+foreach ($flags as $flag => $colors) {
+    foreach ($colors as $color) {
+        array_push($c, $color);
+    }
+}
+$color_count = array_count_values($c);
+arsort($color_count);
+$common_colors = array_slice($color_count, 0, 5, true);
+$key_color = array_keys($common_colors);
+foreach ($key_color as $color) {
+    echo $color . ": ";
+    foreach ($flags as $flag => $colors) {
+        if (in_array($color, $colors)) {
+            echo $flag . " ";
+        }
+    }
+    echo "</br>";
+}
