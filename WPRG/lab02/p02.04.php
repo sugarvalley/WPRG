@@ -23,12 +23,27 @@ Example for $n=3:
 <?php
 
 $n = 3;
-$table = array($n);
 $counter = 1;
 echo "<pre>";
-echo "&nbsp&nbsp&nbsp | ";
+echo "   |";
 for ($i = 1; $i <= $n; $i++) {
-    echo $i . " | ";
+    echo " " . $i . " |";
+}
+echo "\n";
+for ($i = 1; $i <= $n+1; $i++) {
+    echo "---+";
+}
+echo "\n";
+for ($i = 1; $i <= $n; $i++) {
+    echo " " . $i . " |";
+    for ($j = 1; $j <= $n; $j++) {
+        echo " " . $j*$i . " |";
+    }
+    echo "\n";
+    for ($k = 1; $k <= $n+1; $k++) {
+        echo "---+";
+    }
+    echo "\n";
 }
 echo "</pre>";
 ?>
