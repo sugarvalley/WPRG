@@ -8,8 +8,7 @@ Optimize your program (the least loop iterations possible) -->
 
 <?php
 
-function isPrime($x)
-{
+function isPrime($x) {
     $counter = 0;
     if ($x == 1) {
         $counter += 1;

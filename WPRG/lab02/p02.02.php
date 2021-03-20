@@ -34,6 +34,7 @@ foreach ($flags as $flag => $colors) {
         array_push($c, $color);
     }
 }
+ksort($flags);
 $color_count = array_count_values($c);
 arsort($color_count);
 $common_colors = array_slice($color_count, 0, 5, true);
