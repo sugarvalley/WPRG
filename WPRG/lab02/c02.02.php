@@ -1,4 +1,5 @@
+<!-- circumference of a circle -->
 <?php
 $x = 3;
-$y = $x * 3.14;
-echo "Obwod kola o srednicy " . $x . " to: " . $y;
+$x *= 3.14;
+echo "The circumference of a circle equals: " . $x;
