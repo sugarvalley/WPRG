@@ -21,11 +21,11 @@ function equilateralTriangle($n)
 
 function trapeze($a, $b, $h)
 {
-    return (($a+$b)*$h)/2;
+    return (($a + $b) * $h) / 2;
 }
 
 echo circle(3) . "</br>";
 echo square(3) . "</br>";
-echo rectangle(3,4) . "</br>";
+echo rectangle(3, 4) . "</br>";
 echo equilateralTriangle(3) . "</br>";
-echo trapeze(3,4,2) . "</br>";
+echo trapeze(3, 4, 2) . "</br>";
