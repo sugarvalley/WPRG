@@ -1,6 +1,7 @@
 <?php
 
-function showPeople($underaged = true) {
+function showPeople($underaged = true)
+{
     $people = array([
         name => "Jan",
         surname => "Kowalski",
@@ -35,7 +36,7 @@ function showPeople($underaged = true) {
         if ($underaged) {
             array_push($surnames, $data[surname]);
         } else {
-            if ($data[age]>18) {
+            if ($data[age] > 18) {
                 array_push($surnames, $data[surname]);
             }
         }
@@ -44,10 +45,11 @@ function showPeople($underaged = true) {
     foreach ($surnames as $key => $surname) {
         foreach ($people as $person => $data) {
             if ($surname == $data[surname]) {
-                echo $data[surname]  . " " . $data[name] . ", ";
+                echo $data[surname] . " " . $data[name] . ", ";
             }
         }
     }
 
 }
+
 showPeople(false);

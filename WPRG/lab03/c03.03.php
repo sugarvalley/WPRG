@@ -1,5 +1,6 @@
 <?php
-function throws($k, $n, $threshold, $debug = false) {
+function throws($k, $n, $threshold, $debug = false)
+{
     $counter = 0;
     $t = array();
     for ($i = 0; $i < $k; $i++) {
@@ -8,7 +9,7 @@ function throws($k, $n, $threshold, $debug = false) {
             array_push($t, $throwing);
         }
         if ($throwing >= $threshold) {
-            $counter+=1;
+            $counter += 1;
         }
     }
     if ($debug) {
