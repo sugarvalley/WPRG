@@ -1,18 +1,13 @@
 <?php
-$reader = file('hello');
-$count = count($reader);
-echo "BEFORE: </br></br>";
-foreach ($reader as $key => $value) {
-    echo $value;
-    echo "</br>";
+$reader = file_get_contents('hello');
+$reader = explode("\n", $reader);
+echo "<br />BEFORE: <br />";
+foreach ($reader as $row) {
+    echo $row."<br />";
 }
-for ($i = 0; $i < ($count/2); $i++) {
-    $temp = $reader[$i];
-    $reader[$i] = $reader[$count-$i];
-    $reader[$count-$i] = $temp;
+echo "<br />AFTER: <br />";
+$reader = array_reverse($reader);
+foreach ($reader as $row) {
+    echo $row."<br />";
 }
-echo "</br>AFTER</br>";
-foreach ($reader as $key => $value) {
-    echo $value;
-    echo "</br>";
-}
+file_put_contents('hello', implode("\n",$reader));
