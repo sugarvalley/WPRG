@@ -35,14 +35,21 @@ foreach ($prices as $key) {
     }
 }
 $p = array_combine($products, $price);
+$counter = count($p);
 $sum = 0;
 foreach ($s as $product => $value) {
+    $flag = 0;
     foreach ($p as $name => $price) {
         if ($product === $name) {
             $temp = $value * $price;
             echo $product . " " . $value . " x " . $price . " = " . $temp;
             echo '</br>';
             $sum += $temp;
+        } else {
+            $flag++;
+        }
+        if ($flag == $counter) {
+            echo $product . " - </br>";
         }
     }
 }
