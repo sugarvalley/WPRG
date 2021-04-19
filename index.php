@@ -1,13 +1,10 @@
-<!doctype html>
-<html>
-<head>
-<title>Moja strona</title>
-</head>
-<body>
-<h1>Strona domowa</h1>
-<p>Strona domowa - Julia Piecha</p>
 <?php
-echo "Hello World!";
-?>
-</body>
-</html>
+include_once "function.php";
+
+$myDateOfBirth = '1999-12-11';
+$age = howOld($myDateOfBirth);
+$hobbies = readHobbies();
+$currentYear = date('Y');
+
+include_once "WPRG/lab06/view/mainpage.html.php";
+
