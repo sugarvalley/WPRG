@@ -9,6 +9,6 @@ function howOld ($date) {
 }
 
 function readHobbies () {
-    $hobbies = file(__DIR__ . '/resources/hobbies');
+    $hobbies = file(__DIR__ . 'WPRG/lab06/resources/hobbies');
     return $hobbies;
 }

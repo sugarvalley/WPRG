@@ -6,5 +6,5 @@ $age = howOld($myDateOfBirth);
 $hobbies = readHobbies();
 $currentYear = date('Y');
 
-include_once "View/mainpage.html.php";
+include_once "WPRG/lab06/view/mainpage.html.php";
 
